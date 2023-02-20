@@ -1,5 +1,5 @@
 {
-    "name": "select-comment",
+    "name": "select-comments",
     "displayName": "Select Comment",
     "description": "Select contiguous comments until you reach an empty line",
     "version": "0.1.1",
