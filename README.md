@@ -1,4 +1,4 @@
-# Select Paragraph
+# Select Comments
 
 Expand the current selection until it hits a whitespace boundary (port of `expand_selection_to_paragraph` from Sublime Text). If you have this text:
 
@@ -12,9 +12,9 @@ line 4
 line 5
 ```
 
-After running Select Paragraph, the selection will hold lines 2 through 4.
+After running Select Comments, the selection will hold lines 2 through 4.
 
 ## Extension Settings
 
-This extension contributes the command `select-paragraph.selectParagraph` and the keybinding `ctrl + p`.
+This extension contributes the command `select-comments.selectComments` and the keybinding `ctrl + shift + c`.
 

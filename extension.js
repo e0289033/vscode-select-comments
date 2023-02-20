@@ -2,7 +2,7 @@ const { privateEncrypt } = require('crypto');
 const vscode = require('vscode');
 
 function activate(context) {
-  const selectParagraph = vscode.commands.registerCommand('select-paragraph.selectParagraph', function () {
+  const selectComments = vscode.commands.registerCommand('select-comments.selectComments', function () {
     const editor = vscode.window.activeTextEditor;
     let startLine = editor.selection.start.line;
     let endLine = editor.selection.end.line;
@@ -47,7 +47,7 @@ function isComment( line)
     editor.selection = new vscode.Selection(startLine, startCharacter, endLine, endCharacter);
   });
 
-  context.subscriptions.push(selectParagraph);
+  context.subscriptions.push(selectComments);
 }
 exports.activate = activate;
 
