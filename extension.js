@@ -1,7 +1,8 @@
+const { privateEncrypt } = require('crypto');
 const vscode = require('vscode');
 
 function activate(context) {
-  const selectParagraph = vscode.commands.registerCommand('select-paragraph.selectParagraph', function () {
+  const selectComments = vscode.commands.registerCommand('select-comment.selectComment', function () {
     const editor = vscode.window.activeTextEditor;
     let startLine = editor.selection.start.line;
     let endLine = editor.selection.end.line;
@@ -20,33 +21,21 @@ function activate(context) {
 // string is a comment or not
 function isComment( line)
 {
- 
- 
-    // If two continuous slashes
-    // precedes the comment
-    let regex = new RegExp("//.*", );
-    let rex = regex.test(line);
+  let isCom;
+  commentsCharacters = ["//", "/**", "*", "*/"]
 
-    let regexMul = new RegExp("/\\*.*?\\*/", );
-    let rexmul = regexMul.test(line);
+  split_line = line.trim().split(" ")
 
-    let isCom;
-    if(rex){
-      isCom = true;
-    }else if (rexmul)
-    {
-      isCom = true;
-    }else
-      isCom = false;
+  charactersAtLineStart = split_line[0]
 
-    return isCom;
+  return commentsCharacters.includes(charactersAtLineStart);
 }
 
     while (startLine > 0 && !editor.document.lineAt(startLine - 1).isEmptyOrWhitespace && isComment(editor.document.lineAt(startLine - 1).text)) {
       startLine -= 1;
     }
 
-    while (endLine < editor.document.lineCount + 1 && !editor.document.lineAt(endLine + 1).isEmptyOrWhitespace && isComment(editor.document.lineAt(startLine + 1).text)) {
+    while (endLine < editor.document.lineCount + 1 && !editor.document.lineAt(endLine + 1).isEmptyOrWhitespace && isComment(editor.document.lineAt(endLine + 1).text)) {
       endLine += 1;
     }
 
@@ -58,7 +47,7 @@ function isComment( line)
     editor.selection = new vscode.Selection(startLine, startCharacter, endLine, endCharacter);
   });
 
-  context.subscriptions.push(selectParagraph);
+  context.subscriptions.push(selectComments);
 }
 exports.activate = activate;
 

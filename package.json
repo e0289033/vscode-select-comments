@@ -1,7 +1,7 @@
 {
-    "name": "select-paragraph",
-    "displayName": "Select Paragraph",
-    "description": "Select contiguous lines until you reach an empty line",
+    "name": "select-comment",
+    "displayName": "Select Comment",
+    "description": "Select contiguous comments until you reach an empty line",
     "version": "0.1.1",
     "publisher": "nachocab",
     "engines": {
@@ -17,13 +17,13 @@
     "contributes": {
         "commands": [
             {
-                "command": "select-paragraph.selectParagraph",
-                "title": "Select Paragraph"
+                "command": "select-comment.selectComment",
+                "title": "Select Comment"
             }
         ],
         "keybindings": [
             {
-                "command": "select-paragraph.selectParagraph",
+                "command": "select-comment.selectComment",
                 "key": "ctrl+p",
                 "when": "editorTextFocus"
             }
