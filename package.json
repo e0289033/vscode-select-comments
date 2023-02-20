@@ -24,7 +24,7 @@
         "keybindings": [
             {
                 "command": "select-comments.selectComments",
-                "key": "ctrl+shift+c",
+                "key": "ctrl+p",
                 "when": "editorTextFocus"
             }
         ]
