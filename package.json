@@ -3,7 +3,7 @@
     "displayName": "Select Comment",
     "description": "Select contiguous comments until you reach an empty line",
     "version": "0.1.1",
-    "publisher": "nachocab",
+    "publisher": "e0289033",
     "engines": {
         "vscode": "^1.15.0"
     },
@@ -43,7 +43,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/nachocab/vscode-select-paragraph"
+      "url": "https://github.com/e0289033/vscode-select-comments"
     },
     "extensionKind": "ui"
 }
