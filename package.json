@@ -2,7 +2,7 @@
     "name": "select-comments",
     "displayName": "Select Comment",
     "description": "Select contiguous comments until you reach an empty line",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "publisher": "lolokingdurock",
     "engines": {
         "vscode": "^1.15.0"
