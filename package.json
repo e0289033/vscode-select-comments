@@ -24,7 +24,7 @@
         "keybindings": [
             {
                 "command": "select-comment.selectComment",
-                "key": "ctrl+p",
+                "key": "ctrl+alt+p",
                 "when": "editorTextFocus"
             }
         ]

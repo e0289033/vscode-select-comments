@@ -16,5 +16,5 @@ After running Select Comments, the selection will hold lines 2 through 4.
 
 ## Extension Settings
 
-This extension contributes the command `select-comments.selectComments` and the keybinding `ctrl + p`.
+This extension contributes the command `select-comments.selectComments` and the keybinding `Ctrl+Alt+P`.
 
