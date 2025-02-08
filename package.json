@@ -3,13 +3,19 @@
     "displayName": "Select Comment",
     "description": "Select contiguous comments until you reach an empty line",
     "version": "0.1.5",
-    "publisher": "lolokingdurock",
+    "publisher": "lolokingdurock",      
     "engines": {
         "vscode": "^1.15.0"
     },
     "categories": [
         "Other"
     ],
+        "icon": "logo.png",
+        "galleryBanner": {
+          "color": "#C80000",
+          "theme": "dark"
+        },
+      
     "activationEvents": [
         "onCommand:select-paragraph.selectParagraph"
     ],
